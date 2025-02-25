@@ -1,1 +1,1 @@
-SELECT * FROM public."users" WHERE gender = 'Female';
+SELECT * FROM public."users" WHERE gender = 'female';
