@@ -102,6 +102,9 @@
     },
     {
       "key": "primaryColumns.updated_at.computedValue"
+    },
+    {
+      "key": "filterText"
     }
   ],
   "dynamicPropertyPathList": [
@@ -111,6 +114,7 @@
   ],
   "dynamicTriggerPathList": [],
   "enableClientSideSearch": true,
+  "filterText": "{{SearchTableInput.text}}",
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
   "inlineEditingSaveOption": "ROW_LEVEL",
