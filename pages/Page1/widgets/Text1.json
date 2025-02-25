@@ -1,0 +1,48 @@
+{
+  "alignText": "LEFT",
+  "animateLoading": true,
+  "backgroundColor": "transparent",
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "boxShadow": "none",
+  "bottomRow": 15,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "textColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "horizontalAlignment": "LEFT",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "text_widget_76543",
+  "leftColumn": 46,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 46,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 8,
+  "overflow": "NONE",
+  "parentColumnSpace": 12.59375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "text": "Customer Information",
+  "textAlign": "LEFT",
+  "textColor": "{{appsmith.theme.colors.primaryColor}}",
+  "topRow": 8,
+  "type": "TEXT_WIDGET",
+  "verticalAlignment": "CENTER",
+  "widgetId": "text_widget_001",
+  "widgetName": "Text1"
+}

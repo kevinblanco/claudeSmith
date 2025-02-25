@@ -22,7 +22,14 @@
           "type": "CANVAS_WIDGET",
           "version": 91,
           "widgetId": "0",
-          "widgetName": "MainContainer"
+          "widgetName": "MainContainer",
+          "children": [
+            {
+              "widgetName": "Text1",
+              "type": "TEXT_WIDGET",
+              "widgetId": "text_widget_001"
+            }
+          ]
         }
       }
     ],
