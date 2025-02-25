@@ -5,8 +5,8 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "boxShadow": "none",
   "bottomRow": 15,
+  "boxShadow": "none",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
