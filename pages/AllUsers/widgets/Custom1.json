@@ -1,0 +1,67 @@
+{
+  "backgroundColor": "#FFFFFF",
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 102,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "defaultModel": "{{ \n{\n\t\"model\" : appsmith.store.customer\n}\n}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "theme"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "defaultModel"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onResetClick"
+    }
+  ],
+  "events": [
+    "onResetClick"
+  ],
+  "isCanvas": false,
+  "isLoading": false,
+  "isSearchWildcard": true,
+  "isVisible": true,
+  "key": "o0j0jj9j6w",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 97,
+  "mobileLeftColumn": 4,
+  "mobileRightColumn": 27,
+  "mobileTopRow": 67,
+  "needsErrorInfo": false,
+  "onResetClick": "{{showAlert('Successfully reset!!', '');}}",
+  "parentColumnSpace": 13.921875,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 64,
+  "srcDoc": {
+    "css": "#map {\n  height: 100vh;\n}",
+    "html": "<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css\"\n     integrity=\"sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=\"\n     crossorigin=\"\"/>\n<script src=\"https://unpkg.com/leaflet@1.9.4/dist/leaflet.js\"\n     integrity=\"sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=\"\n     crossorigin=\"\"></script>\n<div id=\"root\"></div>",
+    "js": "import React from 'https://cdn.jsdelivr.net/npm/react@18.2.0/+esm';\nimport ReactDOM from 'https://cdn.jsdelivr.net/npm/react-dom@18.2.0/+esm';\nfunction MapWidget() {\n  const latitude = appsmith.model.latitude || 40.7128; // Default latitude\n  const longitude = appsmith.model.longitude || -74.0060; // Default longitude\n\n  React.useEffect(() => {\n    const map = L.map('map').setView([latitude, longitude], 13);\n    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {\n      maxZoom: 19,\n      attribution: '© OpenStreetMap'\n    }).addTo(map);\n    L.marker([latitude, longitude]).addTo(map).bindPopup('Selected Position').openPopup();\n    return () => {\n      map.off();\n      map.remove();\n    };\n  }, [latitude, longitude]);\n  return /*#__PURE__*/React.createElement(\"div\", {\n    id: \"map\",\n    style: {\n      height: \"100vh\"\n    }\n  });\n}\nappsmith.onReady(() => {\n  ReactDOM.render( /*#__PURE__*/React.createElement(MapWidget, null), document.getElementById('root'));\n});"
+  },
+  "theme": "{{appsmith.theme}}",
+  "topRow": 63,
+  "type": "CUSTOM_WIDGET",
+  "uncompiledSrcDoc": {
+    "css": "#map { \n    height: 100vh;\n}",
+    "html": "<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css\"\n     integrity=\"sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=\"\n     crossorigin=\"\"/>\n<script src=\"https://unpkg.com/leaflet@1.9.4/dist/leaflet.js\"\n     integrity=\"sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=\"\n     crossorigin=\"\"></script>\n<div id=\"root\"></div>",
+    "js": "import React from 'https://cdn.jsdelivr.net/npm/react@18.2.0/+esm';\nimport ReactDOM from 'https://cdn.jsdelivr.net/npm/react-dom@18.2.0/+esm';\n\nfunction MapWidget() {\n\n    const latitude = appsmith.model.latitude || 40.7128; // Default latitude\n    const longitude = appsmith.model.longitude || -74.0060; // Default longitude\n\n    React.useEffect(() => {\n        const map = L.map('map').setView([latitude, longitude], 13);\n        \n        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {\n            maxZoom: 19,\n            attribution: '© OpenStreetMap'\n        }).addTo(map);\n        \n        L.marker([latitude, longitude]).addTo(map)\n            .bindPopup('Selected Position')\n            .openPopup();\n        \n        return () => {\n            map.off();\n            map.remove();\n        };\n    }, [latitude, longitude]);\n\n    return <div id=\"map\" style={{ height: \"100vh\" }}></div>;\n}\n\nappsmith.onReady(() => {\n    ReactDOM.render(<MapWidget />, document.getElementById('root'));\n});"
+  },
+  "version": 1,
+  "widgetId": "8kzedpcjzp",
+  "widgetName": "Custom1"
+}

@@ -18,11 +18,15 @@
   "icon": "airplane",
   "pages": [
     {
-      "id": "Page1",
+      "id": "AllUsers",
       "isDefault": true
     },
     {
       "id": "FemaleUsers",
+      "isDefault": false
+    },
+    {
+      "id": "Movies",
       "isDefault": false
     }
   ],

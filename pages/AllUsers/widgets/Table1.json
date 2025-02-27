@@ -109,7 +109,11 @@
       "key": "tableData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onRowSelected"
+    }
+  ],
   "enableClientSideSearch": true,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
@@ -130,6 +134,7 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
+  "onRowSelected": "{{storeValue('customer', Table1.selectedRow);}}",
   "originalBottomRow": 62,
   "originalTopRow": 16,
   "parentId": "0",
