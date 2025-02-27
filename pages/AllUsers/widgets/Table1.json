@@ -124,7 +124,7 @@
   "isVisibleDownload": true,
   "isVisibleFilters": false,
   "isVisiblePagination": true,
-  "isVisibleSearch": false,
+  "isVisibleSearch": true,
   "key": "3awsgo1j2q",
   "label": "Data",
   "leftColumn": 0,
