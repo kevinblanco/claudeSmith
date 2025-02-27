@@ -23,7 +23,234 @@
           "type": "CANVAS_WIDGET",
           "version": 92,
           "widgetId": "0",
-          "widgetName": "MainContainer"
+          "widgetName": "MainContainer",
+          "children": [
+            {
+              "widgetName": "MovieTitle",
+              "type": "TEXT_WIDGET",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "accentColor"
+                }
+              ],
+              "text": "All Time Favorites",
+              "textAlign": "LEFT",
+              "textStyle": "HEADING",
+              "textVariant": "h1",
+              "isVisible": true,
+              "parentColumnSpace": 10,
+              "widgetId": "movieTitleWidget",
+              "topRow": 0,
+              "bottomRow": 8,
+              "leftColumn": 0,
+              "rightColumn": 64,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}"
+            },
+            {
+              "widgetName": "MovieTable",
+              "type": "TABLE_WIDGET_V2",
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "dynamicBindingPathList": [
+                {
+                  "key": "fontFamily"
+                },
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                }
+              ],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
+              "topRow": 16,
+              "bottomRow": 62,
+              "isSortable": true,
+              "parentColumnSpace": 10,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "rightColumn": 64,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisibleFilters": true,
+              "isVisibleDownload": true,
+              "tableData": "{{getAllMovies.data}}",
+              "isVisible": true,
+              "label": "Popular Movies",
+              "searchKey": "",
+              "enableClientSideSearch": true,
+              "widgetId": "movieTableWidget",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "columnOrder": [
+                "title",
+                "vote_count",
+                "vote_average",
+                "release_date",
+                "popularity",
+                "overview",
+                "original_language"
+              ],
+              "primaryColumns": {
+                "title": {
+                  "allowSameOptionsInNewRow": true,
+                  "verticalAlignment": "CENTER",
+                  "horizontalAlignment": "LEFT",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isCellVisible": true,
+                  "isCellEditable": false,
+                  "index": 0,
+                  "width": 150,
+                  "isDisabled": false,
+                  "alias": "title",
+                  "id": "title",
+                  "originalId": "title",
+                  "label": "title",
+                  "computedValue": "{{MovieTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"title\"]))}}"
+                },
+                "vote_count": {
+                  "allowSameOptionsInNewRow": true,
+                  "verticalAlignment": "CENTER",
+                  "horizontalAlignment": "LEFT",
+                  "columnType": "number",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isCellVisible": true,
+                  "isCellEditable": false,
+                  "index": 1,
+                  "width": 150,
+                  "isDisabled": false,
+                  "alias": "vote_count",
+                  "id": "vote_count",
+                  "originalId": "vote_count",
+                  "label": "vote_count",
+                  "computedValue": "{{MovieTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"vote_count\"]))}}"
+                },
+                "vote_average": {
+                  "allowSameOptionsInNewRow": true,
+                  "verticalAlignment": "CENTER",
+                  "horizontalAlignment": "LEFT",
+                  "columnType": "number",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isCellVisible": true,
+                  "isCellEditable": false,
+                  "index": 2,
+                  "width": 150,
+                  "isDisabled": false,
+                  "alias": "vote_average",
+                  "id": "vote_average",
+                  "originalId": "vote_average",
+                  "label": "vote_average",
+                  "computedValue": "{{MovieTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"vote_average\"]))}}"
+                },
+                "release_date": {
+                  "allowSameOptionsInNewRow": true,
+                  "verticalAlignment": "CENTER",
+                  "horizontalAlignment": "LEFT",
+                  "columnType": "date",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isCellVisible": true,
+                  "isCellEditable": false,
+                  "index": 3,
+                  "width": 150,
+                  "isDisabled": false,
+                  "alias": "release_date",
+                  "id": "release_date",
+                  "originalId": "release_date",
+                  "label": "release_date",
+                  "computedValue": "{{MovieTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"release_date\"]))}}"
+                },
+                "popularity": {
+                  "allowSameOptionsInNewRow": true,
+                  "verticalAlignment": "CENTER",
+                  "horizontalAlignment": "LEFT",
+                  "columnType": "number",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isCellVisible": true,
+                  "isCellEditable": false,
+                  "index": 4,
+                  "width": 150,
+                  "isDisabled": false,
+                  "alias": "popularity",
+                  "id": "popularity",
+                  "originalId": "popularity",
+                  "label": "popularity",
+                  "computedValue": "{{MovieTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"popularity\"]))}}"
+                },
+                "overview": {
+                  "allowSameOptionsInNewRow": true,
+                  "verticalAlignment": "CENTER",
+                  "horizontalAlignment": "LEFT",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isCellVisible": true,
+                  "isCellEditable": false,
+                  "index": 5,
+                  "width": 150,
+                  "isDisabled": false,
+                  "alias": "overview",
+                  "id": "overview",
+                  "originalId": "overview",
+                  "label": "overview",
+                  "computedValue": "{{MovieTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"overview\"]))}}"
+                },
+                "original_language": {
+                  "allowSameOptionsInNewRow": true,
+                  "verticalAlignment": "CENTER",
+                  "horizontalAlignment": "LEFT",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isCellVisible": true,
+                  "isCellEditable": false,
+                  "index": 6,
+                  "width": 150,
+                  "isDisabled": false,
+                  "alias": "original_language",
+                  "id": "original_language",
+                  "originalId": "original_language",
+                  "label": "original_language",
+                  "computedValue": "{{MovieTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"original_language\"]))}}"
+                }
+              }
+            }
+          ]
         }
       }
     ],

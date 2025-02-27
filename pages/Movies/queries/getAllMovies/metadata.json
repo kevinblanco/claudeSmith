@@ -16,7 +16,7 @@
           }
         },
         "body": {
-          "data": "{\n  \"find\": \"movies\",\n  \"filter\": {\n    \"homepage\": \"https://movies.disney.com/cruella\"\n  },\n  \"sort\": {\n    \"_id\": 1\n  },\n  \"limit\": 10\n}\n"
+          "data": "{\n  \"find\": \"movies\",\n  \"filter\": {\n    \"vote_count\": { \"$gt\": 700 }\n  },\n  \"sort\": {\n    \"vote_count\": -1\n  },\n  \"limit\": 100\n}\n"
         },
         "collection": {
           "data": "movies"
@@ -53,13 +53,13 @@
             "data": ""
           },
           "query": {
-            "data": "{ }"
+            "data": "{ \"vote_count\": { \"$gt\": 700 } }"
           },
           "skip": {
             "data": ""
           },
           "sort": {
-            "data": "{\"_id\": 1}"
+            "data": "{\"vote_count\": -1}"
           }
         },
         "insert": {
@@ -93,9 +93,9 @@
       "pluginId": "mongo-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "name": "getAllMovies",
     "pageId": "Movies",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }
