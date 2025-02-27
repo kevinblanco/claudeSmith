@@ -1,0 +1,29 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 8,
+  "dynamicBindingPathList": [
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "accentColor"
+    }
+  ],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isVisible": true,
+  "leftColumn": 0,
+  "parentColumnSpace": 10,
+  "rightColumn": 64,
+  "text": "All Time Favorites",
+  "textAlign": "LEFT",
+  "textStyle": "HEADING",
+  "textVariant": "h1",
+  "topRow": 0,
+  "type": "TEXT_WIDGET",
+  "widgetId": "movieTitleWidget",
+  "widgetName": "MovieTitle"
+}
