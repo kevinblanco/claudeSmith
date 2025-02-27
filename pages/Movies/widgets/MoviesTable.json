@@ -1,0 +1,261 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 62,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "canFreezeColumn": true,
+  "childStylesheet": {
+    "button": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "editActions": {
+      "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "iconButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "menuButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "columnOrder": [
+    "title",
+    "vote_count",
+    "vote_average",
+    "release_date",
+    "poster_path",
+    "overview",
+    "original_language",
+    "id"
+  ],
+  "dynamicBindingPathList": [
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "primaryColumns.id.computedValue"
+    },
+    {
+      "key": "primaryColumns.title.computedValue"
+    },
+    {
+      "key": "primaryColumns.vote_count.computedValue"
+    },
+    {
+      "key": "primaryColumns.vote_average.computedValue"
+    },
+    {
+      "key": "primaryColumns.release_date.computedValue"
+    },
+    {
+      "key": "primaryColumns.poster_path.computedValue"
+    },
+    {
+      "key": "primaryColumns.overview.computedValue"
+    },
+    {
+      "key": "primaryColumns.original_language.computedValue"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "tableData"
+    }
+  ],
+  "enableClientSideSearch": true,
+  "flexVerticalAlignment": "start",
+  "horizontalAlignment": "LEFT",
+  "inlineEditingSaveOption": "ROW_LEVEL",
+  "isLoading": false,
+  "isSortable": true,
+  "isVisible": true,
+  "isVisibleDownload": true,
+  "isVisibleFilters": true,
+  "isVisiblePagination": true,
+  "isVisibleSearch": true,
+  "key": "movieTableKey",
+  "label": "Movies",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 70,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 12,
+  "needsErrorInfo": false,
+  "originalBottomRow": 62,
+  "originalTopRow": 16,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "primaryColumns": {
+    "id": {
+      "alias": "id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{MoviesTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "id",
+      "isVisible": true,
+      "label": "ID",
+      "isDisabled": false,
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "title": {
+      "alias": "title",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{MoviesTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"title\"]))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "title",
+      "isVisible": true,
+      "label": "Title",
+      "isDisabled": false,
+      "verticalAlignment": "CENTER",
+      "width": 250
+    },
+    "vote_count": {
+      "alias": "vote_count",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{MoviesTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"vote_count\"]))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "vote_count",
+      "isVisible": true,
+      "label": "Vote Count",
+      "isDisabled": false,
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "vote_average": {
+      "alias": "vote_average",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{MoviesTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"vote_average\"]))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "vote_average",
+      "isVisible": true,
+      "label": "Rating",
+      "isDisabled": false,
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "release_date": {
+      "alias": "release_date",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "date",
+      "computedValue": "{{MoviesTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"release_date\"]))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "release_date",
+      "isVisible": true,
+      "label": "Release Date",
+      "isDisabled": false,
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "poster_path": {
+      "alias": "poster_path",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{MoviesTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"poster_path\"]))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "poster_path",
+      "isVisible": true,
+      "label": "Poster Path",
+      "isDisabled": false,
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "overview": {
+      "alias": "overview",
+      "allowCellWrapping": true,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{MoviesTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"overview\"]))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "overview",
+      "isVisible": true,
+      "label": "Overview",
+      "isDisabled": false,
+      "verticalAlignment": "CENTER",
+      "width": 300
+    },
+    "original_language": {
+      "alias": "original_language",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{MoviesTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"original_language\"]))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "original_language",
+      "isVisible": true,
+      "label": "Language",
+      "isDisabled": false,
+      "verticalAlignment": "CENTER",
+      "width": 150
+    }
+  },
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchKey": "",
+  "tableData": "{{getAllMovies.data}}",
+  "textSize": "0.875rem",
+  "topRow": 12,
+  "totalRecordsCount": 0,
+  "type": "TABLE_WIDGET_V2",
+  "version": 2,
+  "verticalAlignment": "CENTER",
+  "widgetId": "movieTableWidget",
+  "widgetName": "MoviesTable"
+}
